@@ -119,7 +119,7 @@ export default function Home() {
         <div>
           {filteredLands.length ?
             filteredLands.map((land, landIndex) => {
-              const sortedTimestamps = land.treesTimestamps.sort((a, b) => new Date(a) - new Date(b));
+              const sortedTimestamps = land.treesTimestamps.sort((a, b) =>new Date(a).getTime() - new Date(b).getTime());
               if (sortedTimestamps[0] > new Date().getTime()) {
                 return (
                   <div key={landIndex}>
