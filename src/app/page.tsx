@@ -18,7 +18,7 @@ export default function Home() {
 
   const getLands = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/lands", {
+      const res = await fetch("/api/lands", {
         cache: "no-store",
       });
 
