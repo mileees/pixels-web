@@ -33,7 +33,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    console.log(new Date())
     const fetchLands = async () => {
       const { lands } = await getLands();
       setLands(lands);
